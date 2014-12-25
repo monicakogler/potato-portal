@@ -1,0 +1,28 @@
+
+
+<html>
+  <head>
+    <style>
+      img {margin: auto; display: block; height: 500;}
+      div {text-align: center;}
+    </style>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  </head>
+  <body>
+    <div>
+      <img class="slicer" src="img/slicer.gif" />
+      <img class="beat" src="img/potato-beat.gif" />
+    </div>
+    <script>
+      $(function () {
+        $slicer = $('.slicer');
+        $beat = $('.beat');
+        $body = $('body');
+        $(window).scroll(function () {
+          $body.append($slicer.clone());
+          $body.append($beat.clone());
+        });
+      });
+    </script>
+  </html>
+</body>
